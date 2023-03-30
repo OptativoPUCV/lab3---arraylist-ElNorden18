@@ -264,3 +264,14 @@ arraylist.c:18:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 183a33f
+Thu 30 Mar 2023 03:49:17 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:15: error: assignment to ‘void **’ from incompatible pointer type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   16 |   lista->data = (ArrayList *) malloc(sizeof(void *));
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+2c88442
