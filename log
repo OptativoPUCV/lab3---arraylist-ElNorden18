@@ -292,3 +292,19 @@ Thu 30 Mar 2023 03:51:29 PM UTC:
  tests:  1|5
 total_score: 10/70
 953d72a
+Thu 30 Mar 2023 03:58:36 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:12: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   23 |   *l->data[size] = *data;
+      |            ^~~~
+      |            dysize
+arraylist.c:23:12: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:23:20: error: dereferencing ‘void *’ pointer [-Werror]
+   23 |   *l->data[size] = *data;
+      |                    ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0d24d51

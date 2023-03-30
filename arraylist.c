@@ -16,11 +16,11 @@ ArrayList *createList(void) {
   lista->capacity = 2;
   lista->size = 0;
   lista->data = (void **) malloc(sizeof(void *));
-    return lista;
+  return lista;
 }
 
 void append(ArrayList * l, void * data){
-
+  *l->data[size] = *data;
 }
 
 void push(ArrayList * l, void * data, int i){
