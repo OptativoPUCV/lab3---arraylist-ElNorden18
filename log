@@ -369,3 +369,23 @@ Thu 30 Mar 2023 04:02:11 PM UTC:
  tests:  3|4
 total_score: 20/70
 ac9625b
+Thu 30 Mar 2023 04:06:09 PM UTC: 
+ arraylist.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   23 |   if(l->size == l->capacity)
+      |   ^~
+arraylist.c:25:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   25 |     l->data = realloc(l->data, l->capacity)
+      |     ^
+arraylist.c:25:44: error: expected ‘;’ before ‘l’
+   25 |     l->data = realloc(l->data, l->capacity)
+      |                                            ^
+      |                                            ;
+   26 |   l->data[l->size] = data;
+      |   ~                                         
+cc1: all warnings being treated as errors
+Compilation failed
+afd869c
