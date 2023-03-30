@@ -241,3 +241,26 @@ arraylist.c:19:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 4f0b921
+Thu 30 Mar 2023 03:49:06 PM UTC: 
+ arraylist.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:14:21: error: invalid initializer
+   14 |   ArrayList lista = (ArrayList *) malloc(sizeof(void *));
+      |                     ^
+arraylist.c:15:12: error: invalid operands to binary == (have ‘ArrayList’ {aka ‘struct ArrayList’} and ‘void *’)
+   15 |   if(lista == NULL) return NULL;
+      |            ^~
+arraylist.c:16:8: error: invalid type argument of ‘->’ (have ‘ArrayList’ {aka ‘struct ArrayList’})
+   16 |   lista->data = (ArrayList *) malloc(sizeof(void *));
+      |        ^~
+arraylist.c:17:12: error: incompatible types when returning type ‘ArrayList’ {aka ‘struct ArrayList’} but ‘ArrayList *’ {aka ‘struct ArrayList *’} was expected
+   17 |     return lista;
+      |            ^~~~~
+arraylist.c:18:1: error: control reaches end of non-void function [-Werror=return-type]
+   18 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+183a33f
