@@ -15,7 +15,7 @@ ArrayList *createList(void) {
   if(lista == NULL) return NULL;
   lista->capacity = 2;
   lista->size = 0;
-  lista->data = (ArrayList *) malloc(sizeof(void *));
+  lista->data = (void **) malloc(sizeof(void *));
     return lista;
 }
 
