@@ -308,3 +308,20 @@ arraylist.c:23:20: error: dereferencing ‘void *’ pointer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 0d24d51
+Thu 30 Mar 2023 03:58:52 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:3: error: dereferencing ‘void *’ pointer [-Werror]
+   23 |   *l->data[l->size] = *data;
+      |   ^~~~~~~~~~~~~~~~~
+arraylist.c:23:23: error: dereferencing ‘void *’ pointer [-Werror]
+   23 |   *l->data[l->size] = *data;
+      |                       ^~~~~
+arraylist.c:23:21: error: invalid use of void expression
+   23 |   *l->data[l->size] = *data;
+      |                     ^
+cc1: all warnings being treated as errors
+Compilation failed
+b9dc373
