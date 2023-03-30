@@ -275,3 +275,14 @@ arraylist.c:16:15: error: assignment to ‘void **’ from incompatible pointer 
 cc1: all warnings being treated as errors
 Compilation failed
 2c88442
+Thu 30 Mar 2023 03:50:48 PM UTC: 
+ arraylist.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:18:15: error: assignment to ‘void **’ from incompatible pointer type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   18 |   lista->data = (ArrayList *) malloc(sizeof(void *));
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+96771da
