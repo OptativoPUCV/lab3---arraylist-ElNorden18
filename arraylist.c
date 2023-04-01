@@ -46,7 +46,7 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
-  if(l == NULL){
+  if(l->data == NULL){
     l->size = 0;
     return NULL;
   }
