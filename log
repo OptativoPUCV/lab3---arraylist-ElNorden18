@@ -480,3 +480,15 @@ Sat 01 Apr 2023 02:21:51 AM UTC:
  tests:  6|2
 total_score: 40/70
 2df04b7
+Sat 01 Apr 2023 02:27:42 AM UTC: 
+ arraylist.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:52:20: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   52 |     return l->data[size-i];
+      |                    ^~~~
+      |                    dysize
+arraylist.c:52:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+01a6a56
